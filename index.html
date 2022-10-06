@@ -63,9 +63,6 @@
                                     </form>
                                 </div>
 
-                                <!-- Login -->                      
-                                <a href="login.html" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
-                                <img src="" class="user-pic fa fa-user">
                             </div>
                         </div>
                     </div>
@@ -122,79 +119,48 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-12 col-md-7 col-lg-8">
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="post-1" role="tabpanel" aria-labelledby="post-1-tab">
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/mp1.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <span class="post-date widgetfx-1">
-                                        September 24, 2019					
-                                    </span>
-                                    <a href="mambo-leo.html" class="post-title"> <h3> A short film that shows the realities of graduates seeking employment and how
-                                        it has placed them in precarious positions</h3></a>
-                                    <span class="post-description">
-                                        Nionyeshe tofauti yetu kwa vitendo
-                                    </span>
-                                    
+                    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#" data-slide-to="1" class="active"></li>
+                          <li data-target="#" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" id="post-1" aria-labelledby="post-1-corousel">
+                                <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/Mp01.jpg);" alt="First slide">
+                                    <!-- Post Content -->
+                                    <div class="post-content">
+                                        <span class="post-date widgetfx-1">
+                                            September 24, 2019					
+                                        </span>
+                                        <a class="post-title"> <h3> A short film that shows the realities of graduates seeking employment and how
+                                            it has placed them in precarious positions</h3></a>
+                                        <span class="post-description">
+                                            Nionyeshe tofauti yetu kwa vitendo
+                                        </span>
+                                        
+                                    </div>
                                 </div>
+                          </div>
 
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
+                            <div class="carousel-item" id="post-2" aria-labelledby="post-2-corousel">
+                                <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/mp2.jpg);">
+                                                        
+                                    <!-- Post Content -->
+                                    <div class="post-content">
+                                        <span class="post-date widgetfx-1">
+                                            September 24, 2019					
+                                        </span>
+                                        <a class="post-title"> <h3> A short film that shows the realities of graduates seeking employment and how
+                                            it has placed them in precarious positions</h3></a>
+                                        <span class="post-description">
+                                            Nionyeshe tofauti yetu kwa vitendo
+                                        </span>
+                                        
+                                    </div>
+                                </div>      
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="post-2" role="tabpanel" aria-labelledby="post-2-tab">
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/mp2.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
 
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <span class="post-date widgetfx-1">
-                                        September 24, 2019					
-                                    </span>
-                                    <a href="single-post.html" class="post-title"> <h3> A short film that shows the realities of graduates seeking employment and how
-                                        it has placed them in precarious positions</h3></a>
-                                    <span class="post-description">
-                                        Nionyeshe tofauti yetu kwa vitendo
-                                    </span>
-                                    
-                                </div>
-
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="post-3" role="tabpanel" aria-labelledby="post-3-tab">
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/mp1.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <span class="post-date widgetfx-1">
-                                        September 24, 2019					
-                                    </span>
-                                    <a href="single-post.html" class="post-title"> <h3> A short film that shows the realities of graduates seeking employment and how
-                                        it has placed them in precarious positions</h3></a>
-                                    <span class="post-description">
-                                        Nionyeshe tofauti yetu kwa vitendo
-                                    </span>
-                                    
-                                </div>
-
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
-                            </div>
-                        </div>
-
-                        
-
+                        </div>             
                     </div>
                 </div>
 
@@ -241,24 +207,6 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" id="post-3-tab" data-toggle="pill" href="#post-3" role="tab" aria-controls="post-3" aria-selected="false">
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post style-2 d-flex align-items-center">
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/mp1.jpg" alt="">
-                                    </div>
-                                    <div class="post-content">
-                                        <span class="post-date widgetfx-1">
-                                            September 24, 2019					
-                                        </span>
-                                        <h6 class="post-title"> Realities of graduates seeking employment and how
-                                            it has placed them in precarious positions
-                                        </h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -302,13 +250,6 @@
                     <div class="sidebar-area">
 
                         <!-- ***** Single Widget ***** -->
-                        <div class="single-widget followers-widget mb-50">
-                            <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span class="counter">198</span><span>Fan</span></a>
-                            <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span class="counter">220</span><span>Followers</span></a>
-                            <a href="#" class="google"><i class="fa fa-google" aria-hidden="true"></i><span class="counter">140</span><span>Subscribe</span></a>
-                        </div>
-
-                        <!-- ***** Single Widget ***** -->
                         <div class="single-widget newsletter-widget mb-50">
 
                             <!-- Section Heading -->
@@ -316,15 +257,15 @@
                                 <h4>Newsletter</h4>
                                 <div class="line"></div>
                             </div>
-                            <p>Subscribe our newsletter gor get notification about new updates, information discount, etc.</p>
+                            <p>Subscribe our newsletter to get notification about new updates</p>
                             
                             <!-- Newsletter Form -->
-                            <div class="newsletter-form">
+                            <!-- <div class="newsletter-form">
                                 <form action="#" method="post">
                                     <input type="email" name="nl-email" class="form-control mb-15" id="emailnl" placeholder="Enter your email">
                                     <button type="submit" class="btn vizew-btn w-100">Subscribe</button>
                                 </form>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
