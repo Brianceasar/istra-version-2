@@ -7,48 +7,60 @@ modalBtn.addEventListener("click", openModal);
 
 closeBtn.addEventListener("click", closeModal);
 
-document.getElementById("form")
-    .addEventListener("click", function(e) {
-        e.preventDefault();
+sendBtn=document.getElementById("click", submitEmail)
 
-        sendBtn.value = "Sending...";
+// document.getElementById("form")
+//     .addEventListener("click", function(e) {
+//         e.preventDefault();
 
-        const serviceID = "default_service";
-        const templateID = "template_rrjoypv";
+//         sendBtn.value = "Sending...";
 
-        emailjs.sendForm(serviceID, templateID, form)
-        .then(() => {
-            sendBtn.value = "Send Email";
-            console.log("Sent");
-            alert("sent!");
-        },
-           (err) => {
-            btn.value = "send Email";
-            alert(JSON.stringify(err));
-           } 
-        );
-    });
-;
+//         const serviceID = "default_service";
+//         const templateID = "template_rrjoypv";
 
-
-// submitBtn.addEventListener("click", function(e) {
-//     e.preventDefault();
-
-//     emailjs.sendForm("service_o6why5o, template_rrjoypv", params,"58_tngLq-Zuv2fhSr")
-//     .then(
-//         function(res) {
-//             submitBtn.value = "sendEmail";
-//             console.log("success", res.status, res.text)
-//             alert("SUCCESS!" + response.status, response.text);
+//         emailjs.sendForm(serviceID, templateID, form)
+//         .then(() => {
+//             sendBtn.value = "Send Email";
+//             console.log("Sent");
+//             alert("sent!");
 //         },
-        
-//         function(error) {
-//             submitBtn.value = "sendEmail";
-//             console.log('FAILED...', error);
-//             alert(error.message)
-//         }
-//     );
-// });
+//            (err) => {
+//             btn.value = "send Email";
+//             alert(JSON.stringify(err));
+//            } 
+//         );
+//     });
+// ;
+
+(function(){
+    emailjs.init("58_tngLq-Zuv2fhSr");
+})();
+
+(function sendMail(){
+
+    let fullName = document.getElementById("fName").value;
+    let userEmail = document.getElementById("fromEmail").value;
+    let userMessage = document.getElementById("message").value;
+
+        var contactParams = {
+            from_name:fullName,
+            from_email:userEmail,
+            message:userMessage
+        };
+
+        emailjs.send("service_o6why5o", "template_6cvinyn", contactParams);
+        .then(
+            function (res) {
+                console.log("Success")
+
+            },
+            function(error) {
+                console.log("failed");
+            }
+            );
+});
+
+
 
 window.addEventListener("click", outsideClick);
 
@@ -59,6 +71,22 @@ function openModal(){
 function closeModal(){
     modal.style.display = "none"
 };
+
+
+function outsideClick(e){
+    if (e.target == modal){
+        modal.style.display = "none"
+    }
+    
+};
+
+
+$('#emailModal').appendTo("body").modal('show');
+
+
+
+
+
 
 // function sendEmail(e) {
 //     e.preventDefault();
@@ -88,12 +116,21 @@ function closeModal(){
 //     );
 // };
 
-function outsideClick(e){
-    if (e.target == modal){
-        modal.style.display = "none"
-    }
-    
-};
+// submitBtn.addEventListener("click", function(e) {
+//     e.preventDefault();
 
-
-$('#emailModal').appendTo("body").modal('show');
+//     emailjs.sendForm("service_o6why5o, template_rrjoypv", params,"58_tngLq-Zuv2fhSr")
+//     .then(
+//         function(res) {
+//             submitBtn.value = "sendEmail";
+            // console.log("success", res.status, res.text)
+            // alert("SUCCESS!" + response.status, response.text);
+//         },
+        
+//         function(error) {
+//             submitBtn.value = "sendEmail";
+//             console.log('FAILED...', error);
+//             alert(error.message)
+//         }
+//     );
+// });
