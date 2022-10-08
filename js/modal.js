@@ -1,7 +1,7 @@
 const modal=document.getElementById("emailModal");
 const modalBtn=document.getElementById("modalBtn");
 const closeBtn=document.getElementById("closeBtn");
-const sendBtn=document.getElementById("submitBtn");
+
 
 $('#emailModal').appendTo("body").modal('show');
 
@@ -10,37 +10,6 @@ modalBtn.addEventListener("click", openModal);
 closeBtn.addEventListener("click", closeModal);
 
 sendBtn=document.addEventListener("click", sendMail)
-
-
-(function(){
-    emailjs.init("58_tngLq-Zuv2fhSr");
-})();
-
-(function sendMail(){
-
-    let fullName = document.getElementById("fName").value;
-    let userEmail = document.getElementById("fromEmail").value;
-    let userMessage = document.getElementById("message").value;
-
-        var contactParams = {
-            from_name:fullName,
-            from_email:userEmail,
-            message:userMessage
-        };
-
-        emailjs.send("service_o6why5o", "template_6cvinyn", contactParams);
-        .then(
-            function (res) {
-                console.log("Success")
-
-            },
-            function(error) {
-                console.log("failed");
-            }
-        );
-});
-
-
 
 window.addEventListener("click", outsideClick);
 
@@ -57,6 +26,36 @@ function outsideClick(e){
         modal.style.display = "none"
     }
 };
+
+
+(function(){
+    emailjs.init("kLiJJ2jWl1El1AaQf");
+})();
+
+const sendBtn=document.getElementById("submitBtn");
+document.getElementById("modalForm")
+.addEventListener("submit", (function (event){
+    event.preventDefault();
+
+    sendBtn.value="sending...";
+
+    const serviceID = 'default_service';
+    const templateID = 'template_6cvinyn'; 
+
+    emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+            btn.value = 'Send Email';
+            console.log("Sucess!");
+            alert('Sent!');
+        },
+        (error) =>{
+            console.log("failed", error);
+            alert(JSON.stringify(err));
+        }
+    );
+}));
+
+
 
 
 

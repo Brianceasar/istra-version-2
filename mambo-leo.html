@@ -14,15 +14,6 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="custom.css">
 
-        <!-- email js scripts -->
-        <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-        </script>
-        <script type="text/javascript">
-            (function(){
-                emailjs.init("58_tngLq-Zuv2fhSr");
-            })();
-        </script>
     </head>
 
     <body>
@@ -181,18 +172,18 @@
                                         </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form>
+                                            <form id="modalForm">
                                                 <div class="form-group">
                                                     <label for="fname">Name/Organization :</label>
-                                                    <input class="form-control" type="text" id="fName" name="fullname" placeholder="Your name or organisation...">
+                                                    <input class="form-control" type="text" id="from_name" name="fullname" placeholder="Your name or organisation...">
 
-                                                    <label for="email">Email :</label>
-                                                    <input class="form-control" type="email" id="fromEmail" name="email" placeholder="Your email...">
+                                                    <label for="email_id">Email :</label>
+                                                    <input class="form-control" type="text" id="email_id" name="email" placeholder="Your email...">
 
                                                     <label for="message">Message :</label>
                                                     <textarea class="form-control textarea" id="message" name="message"    rows ="3" placeholder="How do you plan to use the video?..."></textarea>
 
-                                                    <button type="button" id="submitBtn" class="btn vizew-btn mt-30">Submit</button>
+                                                    <button type="submit" id="submitBtn" class="btn vizew-btn mt-30">Submit</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -267,15 +258,19 @@
         <!-- ##### All Javascript Script ##### -->
         <!-- jQuery-2.2.4 js -->
         <script src="js/jquery/jquery-2.2.4.min.js"></script>
-        <!-- Popper js -->
-        <script src="js/bootstrap/popper.min.js"></script>
         <!-- Bootstrap js -->
         <script src="js/bootstrap/bootstrap.min.js"></script>
+        <!-- Popper js -->
+        <script src="js/bootstrap/popper.min.js"></script>
         <!-- All Plugins js -->
         <script src="js/plugins/plugins.js"></script>
         <!-- Active js -->
         <script src="js/active.js" />
         <!-- modal -->
         <script src="js/modal.js" />
+        <!-- email js scripts -->
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
     </body>
 </html>
