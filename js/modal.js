@@ -3,34 +3,14 @@ const modalBtn=document.getElementById("modalBtn");
 const closeBtn=document.getElementById("closeBtn");
 const sendBtn=document.getElementById("submitBtn");
 
+$('#emailModal').appendTo("body").modal('show');
+
 modalBtn.addEventListener("click", openModal);
 
 closeBtn.addEventListener("click", closeModal);
 
-sendBtn=document.getElementById("click", submitEmail)
+sendBtn=document.addEventListener("click", sendMail)
 
-// document.getElementById("form")
-//     .addEventListener("click", function(e) {
-//         e.preventDefault();
-
-//         sendBtn.value = "Sending...";
-
-//         const serviceID = "default_service";
-//         const templateID = "template_rrjoypv";
-
-//         emailjs.sendForm(serviceID, templateID, form)
-//         .then(() => {
-//             sendBtn.value = "Send Email";
-//             console.log("Sent");
-//             alert("sent!");
-//         },
-//            (err) => {
-//             btn.value = "send Email";
-//             alert(JSON.stringify(err));
-//            } 
-//         );
-//     });
-// ;
 
 (function(){
     emailjs.init("58_tngLq-Zuv2fhSr");
@@ -57,7 +37,7 @@ sendBtn=document.getElementById("click", submitEmail)
             function(error) {
                 console.log("failed");
             }
-            );
+        );
 });
 
 
@@ -72,16 +52,13 @@ function closeModal(){
     modal.style.display = "none"
 };
 
-
 function outsideClick(e){
     if (e.target == modal){
         modal.style.display = "none"
     }
-    
 };
 
 
-$('#emailModal').appendTo("body").modal('show');
 
 
 
