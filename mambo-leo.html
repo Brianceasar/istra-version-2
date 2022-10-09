@@ -11,8 +11,8 @@
         <title>Istra</title>
 
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="custom.css">
+        <link  rel="stylesheet" href="style.css">
+        <link  rel="stylesheet" href="custom.css">
 
     </head>
 
@@ -158,38 +158,10 @@
                                     </h5>
                                 </blockquote>
 
-                                <!-- Button trigger modal -->
-                                <button type="button" id="modalBtn" class=" btn vizew-btn mt-30" data-toggle="modal" data-target="#emailModal">
+                                <!-- form -->
+                                <a href="download-form.html"  class=" btn vizew-btn mt-30" aria-pressed="true" >
                                     Download
-                                </button>
-                                <div class="modal" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModal" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                        <h5 class="modal-title">Fill in the details</h5>
-                                        <button type="button" class="close" id="closeBtn" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form id="modalForm">
-                                                <div class="form-group">
-                                                    <label for="fname">Name/Organization :</label>
-                                                    <input class="form-control" type="text" id="from_name" name="fullname" placeholder="Your name or organisation...">
-
-                                                    <label for="email_id">Email :</label>
-                                                    <input class="form-control" type="text" id="email_id" name="email" placeholder="Your email...">
-
-                                                    <label for="message">Message :</label>
-                                                    <textarea class="form-control textarea" id="message" name="message"    rows ="3" placeholder="How do you plan to use the video?..."></textarea>
-
-                                                    <button type="submit" id="submitBtn" class="btn vizew-btn mt-30">Submit</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
+                                </a>
 
                                     <!-- Post Author -->
                                 <div class="vizew-post-author d-flex align-items-center py-5">
@@ -257,20 +229,14 @@
 
         <!-- ##### All Javascript Script ##### -->
         <!-- jQuery-2.2.4 js -->
-        <script src="js/jquery/jquery-2.2.4.min.js"></script>
+        <script aync src="js/jquery/jquery-2.2.4.min.js"></script>
         <!-- Bootstrap js -->
-        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script async src="js/bootstrap/bootstrap.min.js"></script>
         <!-- Popper js -->
-        <script src="js/bootstrap/popper.min.js"></script>
+        <script async src="js/bootstrap/popper.min.js"></script>
         <!-- All Plugins js -->
-        <script src="js/plugins/plugins.js"></script>
+        <script async src="js/plugins/plugins.js"></script>
         <!-- Active js -->
-        <script src="js/active.js" />
-        <!-- modal -->
-        <script src="js/modal.js" />
-        <!-- email js scripts -->
-        <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-        </script>
+        <script async src="js/active.js"></script> 
     </body>
 </html>

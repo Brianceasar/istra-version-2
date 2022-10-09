@@ -9,8 +9,6 @@ modalBtn.addEventListener("click", openModal);
 
 closeBtn.addEventListener("click", closeModal);
 
-sendBtn=document.addEventListener("click", sendMail)
-
 window.addEventListener("click", outsideClick);
 
 function openModal(){
@@ -28,29 +26,3 @@ function outsideClick(e){
 };
 
 
-(function(){
-    emailjs.init("kLiJJ2jWl1El1AaQf");
-})();
-
-const sendBtn=document.getElementById("submitBtn");
-document.getElementById("modalForm")
-.addEventListener("submit", (function (event){
-    event.preventDefault();
-
-    sendBtn.value="sending...";
-
-    const serviceID = 'default_service';
-    const templateID = 'template_6cvinyn'; 
-
-    emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-            btn.value = 'Send Email';
-            console.log("Sucess!");
-            alert('Sent!');
-        },
-        (error) =>{
-            console.log("failed", error);
-            alert(JSON.stringify(err));
-        }
-    );
-}));
