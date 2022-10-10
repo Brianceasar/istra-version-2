@@ -141,27 +141,40 @@
 
                     <!-- Contact Form Area -->
                     <div class="contact-form-area">
-                        <form action="#" method="post">
-                            <div class="row">
-                                <div class="col-12 col-lg-6">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name*">
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <input type="email" class="form-control" id="email_id" placeholder="Your Email*">
-                                </div>
-                                <div class="col-12">
-                                    <textarea name="message" class="form-control" id="message" placeholder="Message*"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn vizew-btn mt-30" type="submit">Submit Comment</button>
-                                </div>
+                        <form id="myForm">
+                            <!-- name -->
+                            <div class="form-group">
+                              <label for="name">Name</label>
+                              <input
+                                type="name"
+                                name="name"
+                                class="form-control"
+                                id="name"
+                                placeholder="Your name or organisation..."
+                              />
                             </div>
+                
+                            <!-- email -->
+                            <div class="form-group">
+                              <label for="email">Email address</label>
+                              <input
+                                type="email"
+                                name="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="Enter your email"
+                              />
+                            </div>
+
+                            <div class="form-group">
+                              <label for="message">Message</label>
+                              <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+                            </div>
+                
+                            <button type="submit" class="btn vizew-btn mt-30">Submit</button>
                         </form>
                     </div>
-
                 </div>
-
-                
             </div>
         </div>
     </section>
@@ -180,27 +193,49 @@
 
     <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script aync src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script async src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- Popper js -->
+    <script async src="js/bootstrap/popper.min.js"></script>
     <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
+    <script async src="js/plugins/plugins.js"></script>
     <!-- Active js -->
-    <script src="js/active.js"></script>
-    <!-- email js -->
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("58_tngLq-Zuv2fhSr");
-        })();
-    </script>
-<!-- script.js -->
-<script src="js/script.js"></script>
+    <script async src="js/active.js"></script>
 
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("kLiJJ2jWl1El1AaQf");
+    })();
+  </script>
+  
+  <script>
+    // listen to the form submission
+    document
+      .getElementById("myForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const serviceID = 'default_service';
+        const templateID = 'template_6cvinyn';
+
+        // send the email here
+        emailjs.sendForm(serviceID, templateID, this).then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            alert("A download link was sent to your email!");
+          },
+          (error) => {
+            console.log("FAILED...", error);
+            alert("FAILED...", error);
+          }
+        );
+      });
+  </script>
 
 </body>
 
